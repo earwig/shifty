@@ -41,7 +41,7 @@ private func directoryExistsAtPath(_ path: String) -> Bool {
     return exists && isDirectory.boolValue
 }
 
-private var applicationSupportDirectory: URL? {
+private var myApplicationSupportDirectory: URL? {
     get {
         let urls = FileManager.default.urls(for: .applicationSupportDirectory,
                                             in: .userDomainMask)
@@ -129,7 +129,7 @@ extension URL {
             
             do {
                 let data = try PropertyListSerialization.data(fromPropertyList: dic, format: .xml, options: 0)
-                guard let etld_path = applicationSupportDirectory else { throw PSLError.AppSupportDir }
+                guard let etld_path = myApplicationSupportDirectory else { throw PSLError.AppSupportDir }
                 if !directoryExistsAtPath(etld_path.path) {
                     try FileManager.default.createDirectory(at: etld_path,
                                                             withIntermediateDirectories: true)
@@ -181,7 +181,7 @@ extension URL {
             }
             // check if there an updated PSL to load
             if !LOADING_UPDATED_PSL {
-                if let etld_path = applicationSupportDirectory?
+                if let etld_path = myApplicationSupportDirectory?
                     .appendingPathComponent(PSL_PLIST_NAME) {
                     if FileManager.default.fileExists(atPath: etld_path.path) {
                         _ruleTree = loadRuleTree(url: etld_path)
