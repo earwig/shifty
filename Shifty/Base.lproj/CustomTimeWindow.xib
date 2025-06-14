@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +19,7 @@
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="375" height="130"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,10 +33,10 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="shiftyCircleIcon" id="H23-Be-uWH"/>
                     </imageView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="Lby-a4-HBQ">
-                        <rect key="frame" x="105" y="61" width="250" height="49"/>
+                        <rect key="frame" x="105" y="60" width="250" height="50"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-RF-vX0">
-                                <rect key="frame" x="-2" y="32" width="147" height="17"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-RF-vX0">
+                                <rect key="frame" x="-2" y="34" width="147" height="16"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Night Shift for" id="5HX-Xg-Gxp">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -44,18 +44,18 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dph-5v-720">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="22"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="500" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QLa-yb-BfV">
-                                        <rect key="frame" x="-2" y="3" width="43" height="17"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="500" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QLa-yb-BfV">
+                                        <rect key="frame" x="-2" y="3" width="42" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="hours:" id="Y5N-UQ-dDD">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-tt-P5j">
-                                        <rect key="frame" x="43" y="0.0" width="40" height="22"/>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-tt-P5j">
+                                        <rect key="frame" x="42" y="0.0" width="40" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="vgh-KY-hW8"/>
                                         </constraints>
@@ -69,22 +69,22 @@
                                         </textFieldCell>
                                     </textField>
                                     <customView horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-08-U6W" userLabel="Spacer">
-                                        <rect key="frame" x="87" y="21" width="10" height="1"/>
+                                        <rect key="frame" x="86" y="20" width="10" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="G86-UT-M2c"/>
                                             <constraint firstAttribute="width" constant="10" id="UAP-TD-OzG"/>
                                         </constraints>
                                     </customView>
-                                    <textField horizontalHuggingPriority="500" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tsZ-Jr-Qrj">
-                                        <rect key="frame" x="99" y="3" width="56" height="17"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="500" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tsZ-Jr-Qrj">
+                                        <rect key="frame" x="98" y="3" width="56" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="minutes:" id="2Kf-wM-5dv">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JWZ-rU-Iwf">
-                                        <rect key="frame" x="157" y="0.0" width="40" height="22"/>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JWZ-rU-Iwf">
+                                        <rect key="frame" x="156" y="0.0" width="40" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="v2H-Dh-sdW"/>
                                         </constraints>
@@ -94,8 +94,8 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-sN-rmW">
-                                        <rect key="frame" x="199" y="5" width="53" height="17"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-sN-rmW">
+                                        <rect key="frame" x="198" y="5" width="54" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" " id="EMc-rb-n2W">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -137,10 +137,7 @@
                         </constraints>
                     </customView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nlQ-dl-FsZ">
-                        <rect key="frame" x="279" y="13" width="82" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="d9I-F4-PkU"/>
-                        </constraints>
+                        <rect key="frame" x="278" y="13" width="84" height="32"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mX6-tk-bjB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -148,12 +145,15 @@
 DQ
 </string>
                         </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="d9I-F4-PkU"/>
+                        </constraints>
                         <connections>
                             <action selector="okButtonClicked:" target="-2" id="tJP-jf-WLa"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CkZ-02-pTf">
-                        <rect key="frame" x="197" y="13" width="82" height="32"/>
+                        <rect key="frame" x="196" y="13" width="84" height="32"/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UXa-Rw-949">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -188,6 +188,6 @@ Gw
         </window>
     </objects>
     <resources>
-        <image name="shiftyCircleIcon" width="245.75999450683594" height="245.75999450683594"/>
+        <image name="shiftyCircleIcon" width="256" height="256"/>
     </resources>
 </document>
