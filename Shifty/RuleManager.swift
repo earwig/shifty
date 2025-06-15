@@ -63,13 +63,13 @@ class RuleManager {
         }
     }
     
-    private var currentAppDisableRules = Set<AppRule>() {
+    var currentAppDisableRules = Set<AppRule>() {
         didSet {
             UserDefaults.standard.set(try? PropertyListEncoder().encode(currentAppDisableRules), forKey: Keys.currentAppDisableRules)
         }
     }
     
-    private var runningAppDisableRules = Set<AppRule>() {
+    var runningAppDisableRules = Set<AppRule>() {
         didSet {
             UserDefaults.standard.set(try? PropertyListEncoder().encode(runningAppDisableRules), forKey: Keys.runningAppDisableRules)
         }

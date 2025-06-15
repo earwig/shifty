@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return PrefWindowController(
             viewControllers: [
                 PrefGeneralViewController(),
+                PrefRulesViewController(),
                 PrefShortcutsViewController(),
                 PrefAboutViewController()],
             title: NSLocalizedString("prefs.title", comment: "Preferences"))

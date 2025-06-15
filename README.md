@@ -1,3 +1,7 @@
+This __fork__ of Shifty adds some features I found personally useful. It probably won't make sense for your setup, but you're welcome to do what you want with it.
+
+---
+
 Shifty was made to expand the capabilities of the built in Night Shift feature in macOS. You can disable Night Shift for specific apps, websites, and custom time periods. It also provides easy access to a slider to fine tune your color temperature. With Shifty, Night Shift becomes a power user feature!
 
 <img src='docs/en/images/shifty-screenshot-large.png' width=70%>

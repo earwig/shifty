@@ -44,6 +44,7 @@
 
 "prefs.title" = "Preferences";
 "prefs.general" = "General";
+"prefs.rules" = "Rules";
 "prefs.shortcuts" = "Shortcuts";
 "prefs.about" = "About";
 
