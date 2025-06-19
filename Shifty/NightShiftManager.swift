@@ -71,7 +71,16 @@ class NightShiftManager {
         var prevSchedule = client.schedule
         
         updateDarkMode()
-        
+
+        if isDisableRuleActive {
+            client.setNightShiftEnabled(false)
+            if UserDefaults.standard.bool(forKey: Keys.trueToneControl) {
+                if #available(macOS 10.14, *) {
+                    CBTrueToneClient.shared.isTrueToneEnabled = false
+                }
+            }
+        }
+
         // @convention block called by CoreBrightness
         client.setStatusNotificationBlock {
             if self.schedule == prevSchedule {

@@ -25,6 +25,7 @@ class StatusMenuController: NSObject, NSMenuDelegate {
     @IBOutlet weak var enableBrowserAutomationMenuItem: NSMenuItem!
     @IBOutlet weak var disableHourMenuItem: NSMenuItem!
     @IBOutlet weak var disableCustomMenuItem: NSMenuItem!
+    @IBOutlet weak var disableDisplayMenuItem: NSMenuItem!
     @IBOutlet weak var preferencesMenuItem: NSMenuItem!
     @IBOutlet weak var quitMenuItem: NSMenuItem!
     @IBOutlet weak var sliderView: SliderView!
@@ -292,8 +293,21 @@ class StatusMenuController: NSObject, NSMenuDelegate {
             disableCustomMenuItem.isEnabled = true
             disableCustomMenuItem.title = NSLocalizedString("menu.disabled_custom", comment: "Disabled for custom time")
         }
-        
-        
+
+
+        // MARK: disable for display
+        let displaySubmenu = disableDisplayMenuItem.submenu!
+        displaySubmenu.removeAllItems()
+        for display in RuleManager.shared.displays.sorted(by: { $0.name < $1.name }) {
+            let item = displaySubmenu.addItem(withTitle: display.name, action: #selector(disableDisplay(_:)), keyEquivalent: "")
+            item.target = self
+            item.tag = Int(display.displayID)
+            if RuleManager.shared.isDisabledForDisplay(forDisplay: display.uuid) {
+                item.state = .on
+            }
+        }
+
+
         // MARK: toggle True Tone
         if #available(macOS 10.14, *) {
             trueToneMenuItem.isHidden = false
@@ -515,8 +529,26 @@ class StatusMenuController: NSObject, NSMenuDelegate {
         }
     }
     
-    
-    
+
+
+    @IBAction func disableDisplay(_ sender: NSMenuItem) {
+        let displayID = CGDirectDisplayID(sender.tag)
+        let displayInfo = RuleManager.shared.displays.first { $0.displayID == displayID }
+
+        guard let selectedDisplay = displayInfo?.uuid else {
+            print("Error: No matching display for ID \(displayID)")
+            return
+        }
+
+        if RuleManager.shared.isDisabledForDisplay(forDisplay: selectedDisplay) {
+            RuleManager.shared.removeDisplayDisableRule(forDisplay: selectedDisplay)
+        } else {
+            RuleManager.shared.addDisplayDisableRule(forDisplay: selectedDisplay)
+        }
+    }
+
+
+
     @IBAction func toggleTrueTone(_ sender: Any) {
         if #available(macOS 10.14, *) {
             CBTrueToneClient.shared.isTrueToneEnabled = !CBTrueToneClient.shared.isTrueToneEnabled

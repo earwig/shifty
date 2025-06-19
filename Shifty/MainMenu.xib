@@ -24,6 +24,7 @@
                 <outlet property="descriptionMenuItem" destination="zi6-lD-Hd5" id="DcD-QI-A3k"/>
                 <outlet property="disableCurrentAppMenuItem" destination="ycw-C3-JG6" id="w7g-sV-odc"/>
                 <outlet property="disableCustomMenuItem" destination="VMR-D3-M60" id="Seo-8A-F4I"/>
+                <outlet property="disableDisplayMenuItem" destination="8xK-QI-iGF" id="irH-6r-o8f"/>
                 <outlet property="disableDomainMenuItem" destination="JPo-kA-2ad" id="apR-hI-2G1"/>
                 <outlet property="disableHourMenuItem" destination="lLZ-zs-A2J" id="JBY-cw-D9b"/>
                 <outlet property="disableRunningAppMenuItem" destination="Bq2-vW-0D6" id="SiA-oU-QCK"/>
@@ -97,6 +98,10 @@
                     <connections>
                         <action selector="disableCustomTime:" target="YHE-ZD-Fjn" id="tHA-tu-det"/>
                     </connections>
+                </menuItem>
+                <menuItem title="Disable for display" id="8xK-QI-iGF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Disable for display" id="Xxx-Ok-a1w"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Myq-mS-cHa"/>
                 <menuItem title="Turn off True Tone" id="fW8-W0-ja9">

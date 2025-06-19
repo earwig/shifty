@@ -76,6 +76,14 @@ class PrefRulesViewController: NSViewController, MASPreferencesViewController {
             descriptions.append("Browser rules:\n\(rulesText)")
         }
 
+        let displayRules = RuleManager.shared.displayRules
+        if !displayRules.isEmpty {
+            let rulesText = displayRules.map {
+                $0.description
+            }.sorted().joined(separator: "\n")
+            descriptions.append("Display rules:\n\(rulesText)")
+        }
+
         rulesTextField.stringValue = descriptions.joined(separator: "\n\n")
     }
 }
